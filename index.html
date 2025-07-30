@@ -3,14 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Welcome - Interactive Greeting</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
-<link rel="stylesheet" href="style.css">
 <body>
+    <div class="background-overlay"></div>
+    
     <div class="container">
+        <div class="greeting-card">
+            <div class="icon-container">
+                <svg class="greeting-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2L13.09 8.26L20 9L13.09 9.74L12 16L10.91 9.74L4 9L10.91 8.26L12 2Z" fill="currentColor"/>
+                    <path d="M19 15L20.09 18.26L24 19L20.09 19.74L19 23L17.91 19.74L14 19L17.91 18.26L19 15Z" fill="currentColor"/>
+                    <path d="M5 15L6.09 18.26L10 19L6.09 19.74L5 23L3.91 19.74L0 19L3.91 18.26L5 15Z" fill="currentColor"/>
+                </svg>
+            </div>
+            
+            <h1 class="greeting-title">
+                <span id="updateContent" class="greeting-text">Namaste, Beautiful Soul! 🙏</span>
+            </h1>
+            
+            <p class="greeting-subtitle">
+                <span id="subtitleText">Click below to get your personalized greeting based on Indian time</span>
+            </p>
+            
+            <button class="cta-button" id="greetingButton">
+                <span class="button-text">Say Hello</span>
+                <svg class="button-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+            
+            <div class="reset-container" id="resetContainer" style="display: none;">
+                <button class="reset-button" id="resetButton">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 12A9 9 0 0 1 12 3A9 9 0 0 1 21 12A9 9 0 0 1 12 21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        <path d="M12 7V12L15 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    Reset Greeting
+                </button>
+            </div>
+        </div>
         
-    <h1><span id="updateContent"> HELLO MY DEAR FRIEND</span></h1>
-    <button >touch me</button></div>
+        <div class="floating-elements">
+            <div class="floating-element" style="--delay: 0s; --duration: 6s;"></div>
+            <div class="floating-element" style="--delay: 2s; --duration: 8s;"></div>
+            <div class="floating-element" style="--delay: 4s; --duration: 7s;"></div>
+            <div class="floating-element" style="--delay: 1s; --duration: 9s;"></div>
+            <div class="floating-element" style="--delay: 3s; --duration: 5s;"></div>
+        </div>
+    </div>
+    
     <script src="hello.js"></script>
 </body>
 </html>
